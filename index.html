@@ -50,6 +50,53 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
+     button{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .container2{
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        width: 600px;
+        
+       
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        overflow-y: auto;
+        
+        
+    }
+    .btn2{
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+.container1, .container2, button {
+    transition: all 0.3s ease;
+}
+
+.container1:hover, .container2:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+    filter: brightness(85%); 
+}
 </style>
 </head>
 <body>
