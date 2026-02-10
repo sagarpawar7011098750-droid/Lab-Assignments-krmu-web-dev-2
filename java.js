@@ -23,3 +23,39 @@ form.addEventListener("submit", function(event) {
     
     form.reset();
 });
+function createEvent(title, date, category, desc) {
+   
+    const li = document.createElement("li");
+    
+   
+    li.className = `event-card ${category}`;
+
+   
+    li.innerHTML = `
+        <div class="info">
+            <h3>${title} <small>(${category})</small></h3>
+            <p><strong>Date:</strong> ${date || "No date"}</p>
+            <p>${desc}</p>
+        </div>
+        <button class="delete-btn">Delete</button>
+    `;
+
+    
+    li.querySelector(".delete-btn").addEventListener("click", function() {
+        li.remove();
+    });
+
+    
+    eventList.appendChild(li);
+}
+
+clearBtn.addEventListener("click", function() {
+    if(confirm("Delete all events?")) {
+        eventList.innerHTML = "";
+    }
+});
+
+sampleBtn.addEventListener("click", function() {
+    createEvent("Team Meeting", "2023-11-15", "work", "Discuss project roadmap.");
+    createEvent("Grocery Shopping", "2023-11-16", "personal", "Buy milk and eggs.");
+});
