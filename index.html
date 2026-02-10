@@ -1,56 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Calander</title>
-<style>
-    .parent{
+    <style>
+      .parent {
         display: flex;
-        
+
         align-items: flex-start;
-        
+
         padding: 20px;
-         align-items: stretch;
-    }
-    body{
+        align-items: stretch;
+      }
+      body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
         background-color: #88bcd2;
-    }
-    .container1{
+      }
+      .container1 {
         max-width: 600px;
         margin: 50px auto;
         background-color: #fff;
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         justify-content: space-evenly;
 
-        
         width: 400px;
-    }
-    h1{
+      }
+      h1 {
         text-align: center;
         color: #333;
-    }
-    form{
+      }
+      form {
         display: flex;
         flex-direction: column;
-    }
-    label{
+      }
+      label {
         margin-top: 10px;
         color: #555;
-    }
-    input, select, textarea{
+      }
+      input,
+      select,
+      textarea {
         padding: 10px;
         margin-top: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
-    }
-     button{
+      }
+      button {
         margin-top: 20px;
         padding: 10px;
         background-color: #28a745;
@@ -58,85 +59,77 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-    }
-    .container2{
+      }
+      .container2 {
         max-width: 600px;
         margin: 20px auto;
         background-color: #fff;
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         width: 600px;
-        
-       
-    }
-    ul{
+      }
+      ul {
         list-style-type: none;
         padding: 0;
         overflow-y: auto;
-        
-        
-    }
-    .btn2{
+      }
+      .btn2 {
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
-    }
-    
-.container1, .container2, button {
-    transition: all 0.3s ease;
-}
+      }
 
-.container1:hover, .container2:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
+      .container1,
+      .container2,
+      button {
+        transition: all 0.3s ease;
+      }
 
-button:hover {
-    cursor: pointer;
-    transform: scale(1.05); 
-    filter: brightness(85%); 
-}
-</style>
-</head>
-<body>
-    
-<div class="parent">
-    <div class="container1">
+      .container1:hover,
+      .container2:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        filter: brightness(85%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="container1">
         <h1>Event Calander</h1>
         <form action="" id="form">
-<label for="event_title">Event Title:</label>
-<input type="text" id="event_title" name="event_title">
-<label for="event_date">Event Date:</label>
-<input type="date" name="" id="event_date">
-<label for="category">Category:</label>
-<select name="category" id="category">
-    <option value="work">Work</option>
-    <option value="personal">Personal</option>
-    <option value="other">Other</option>
-</select>
-<label for="description">Description:</label>
-<textarea name="description" id="description"></textarea>
-<button type="submit">Add Event</button>
+          <label for="event_title">Event Title:</label>
+          <input type="text" id="event_title" name="event_title" />
+          <label for="event_date">Event Date:</label>
+          <input type="date" name="" id="event_date" />
+          <label for="category">Category:</label>
+          <select name="category" id="category">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="description">Description:</label>
+          <textarea name="description" id="description"></textarea>
+          <button type="submit">Add Event</button>
         </form>
+      </div>
 
-       
-    </div>
-
-    <div class="container2">
+      <div class="container2">
         <h1>My Events</h1>
         <div class="btn2">
-        <button id="clearEvents">Clear all Events</button>
-        <button id="addSampleEvents">Add Sample Events</button>
-        
+          <button id="clearEvents">Clear all Events</button>
+          <button id="addSampleEvents">Add Sample Events</button>
+        </div>
+        <ul id="eventList"></ul>
+      </div>
     </div>
-    <ul id="eventList"></ul>
-    </div>
-</div>
 
-<script src="java.js"></script>
-   
-
-
-</body>
+    <script src="java.js"></script>
+  </body>
 </html>
