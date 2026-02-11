@@ -58,4 +58,5 @@ clearBtn.addEventListener("click", function() {
 sampleBtn.addEventListener("click", function() {
     createEvent("Team Meeting", "2023-11-15", "work", "Discuss project roadmap.");
     createEvent("Grocery Shopping", "2023-11-16", "personal", "Buy milk and eggs.");
+    createEvent("Gym", "2023-11-16", "personal", "exercise accordingly..");
 });
